@@ -8,7 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-    * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
 
     body {
         margin: 0;
@@ -72,6 +74,7 @@
         animation: fadeIn 1.2s ease;
     }
 
+    /* popup */
     .popup {
         position: fixed;
         background: white;
@@ -100,6 +103,7 @@
         to { transform: scale(1); opacity: 1; }
     }
 
+    /* subtle floating hearts */
     .heart {
         position: absolute;
         font-size: 12px;
@@ -113,25 +117,19 @@
         to { transform: translateY(-10vh); }
     }
 
-    iframe {
-        display: none;
-    }
-
     @media (max-width: 480px) {
-        .card { padding: 30px 20px; }
-        p { font-size: 14px; }
+        .card {
+            padding: 30px 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
     }
 </style>
 </head>
 
 <body>
-
-<!-- YouTube Background Music -->
-<iframe 
-    id="ytplayer"
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE?autoplay=1&loop=1&playlist=VIDEO_ID_HERE&controls=0&showinfo=0&modestbranding=1"
-    allow="autoplay">
-</iframe>
 
 <div class="card">
     <p>
@@ -171,6 +169,7 @@ function showPopup() {
     }, 2800);
 }
 
+/* minimal floating hearts */
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
